@@ -1,0 +1,19 @@
+.block-notice {
+	background-color: #c1292e;
+	color: #fff;
+	padding: 25px;
+	line-height: 1.2;
+
+	& .block-notice__msg {
+		font-size: 1rem;
+	}
+
+	& .block-notice__msg-hidden {
+		font-size: 1rem;
+		font-style: italic;
+	}
+}
+
+.acf-menu-item-fields {
+	display: none !important;
+}

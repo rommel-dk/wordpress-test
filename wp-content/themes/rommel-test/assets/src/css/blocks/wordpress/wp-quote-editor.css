@@ -1,0 +1,29 @@
+[data-type="core/quote"] {
+	& p {
+		font-weight: var(--weight-light);
+		font-size: var(--size-l);
+		line-height: var(--line-height-xl);
+		padding-top: 85px;
+		margin-left: 0;
+	}
+
+	& cite {
+		display: block;
+		font-size: var(--size-m);
+		line-height: var(--line-height-l);
+		margin-top: var(--spacing-l);
+		text-align: left;
+		padding-bottom: 85px;
+	}
+
+	@media (--large-up) {
+		& p {
+			line-height: var(--line-height-s);
+		}
+	}
+
+	&.wp-block-quote::after,
+	&.wp-block-quote::before {
+		height: 100%;
+	}
+}

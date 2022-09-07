@@ -1,0 +1,103 @@
+/* Text sizes */
+.has-xxs-font-size {
+	font-size: var(--size-xxs);
+	line-height: var(--line-height-base);
+}
+
+.has-xs-font-size {
+	font-size: var(--size-xs);
+	line-height: var(--line-height-base);
+}
+
+.has-s-font-size {
+	font-size: var(--size-s);
+	line-height: var(--line-height-base);
+}
+
+.has-m-font-size {
+	font-size: var(--size-m);
+	line-height: var(--line-height-base);
+}
+
+.has-l-font-size {
+	font-size: var(--size-l);
+	line-height: var(--line-height-base);
+}
+
+.has-xl-font-size {
+	font-size: var(--size-xl);
+	line-height: var(--line-height-m);
+}
+
+/* Heading sizes */
+.has-heading-xxs-font-size {
+	font-size: var(--size-l);
+	line-height: var(--line-height-base);
+	font-weight: var(--weight-bold);
+}
+
+.has-heading-s-font-size {
+	font-size: var(--size-heading-xxs);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+}
+
+.has-heading-m-font-size {
+	font-size: var(--size-heading-s);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+	letter-spacing: var(--letter-spacing-s);
+}
+
+.has-heading-l-font-size {
+	font-size: var(--size-heading-m);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+}
+
+.has-heading-xl-font-size {
+	font-size: var(--size-heading-l);
+	line-height: var(--line-height-s);
+	font-weight: var(--weight-bold);
+	letter-spacing: var(--letter-spacing-s);
+}
+
+/* Other sizes */
+.has-caps-s-font-size {
+	font-size: var(--size-caps-s);
+	line-height: var(--line-height-m);
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing-m);
+	font-weight: var(--weight-bold);
+}
+
+.has-caps-font-size {
+	font-weight: var(--weight-bold);
+	font-size: var(--size-caps);
+	line-height: var(--line-height-m);
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing-m);
+}
+
+@media (--medium-up) {
+	/* Heading sizes */
+	.has-heading-xxs-font-size {
+		font-size: var(--size-heading-xxs);
+	}
+
+	.has-heading-s-font-size {
+		font-size: var(--size-heading-s);
+	}
+
+	.has-heading-m-font-size {
+		font-size: var(--size-heading-m);
+	}
+
+	.has-heading-l-font-size {
+		font-size: var(--size-heading-l);
+	}
+
+	.has-heading-xl-font-size {
+		font-size: var(--size-heading-xl);
+	}
+}

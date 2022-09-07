@@ -1,0 +1,44 @@
+# WP core
+/wp-config.php
+/wp-content/backups/
+/wp-content/blogs.dir/
+/wp-content/cache/
+/wp-content/db.php
+/wp-content/upgrade/
+/wp-content/uploads/
+/wp-content/languages
+
+# Plugins
+sitemap.xml
+sitemap.xml.gz
+/wp-content/advanced-cache.php
+/wp-content/backup-db/
+/wp-content/w3tc-config/
+/wp-content/plugins/disable-emails/*
+/wp-content/wp-cache-config.php
+/wp-content/wp-rocket-config/
+/wp-content/plugins/dev/
+/wp-content/plugins/**/node_modules/
+
+# Development
+/wp-content/mu-plugins/development.php
+
+# Themes
+/wp-content/themes/**/bower_components/
+/wp-content/themes/**/node_modules/
+/wp-content/themes/**/*.map
+
+# Local system
+*.gz
+*.log
+*.sql
+.DS_Store
+.idea
+.htaccess
+Makefile
+
+# Local config
+.env
+docker-compose.override.yml
+mariadb-init
+nginx.conf

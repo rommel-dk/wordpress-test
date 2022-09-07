@@ -1,0 +1,4 @@
+.wp-block-group.waves-after--is-active,
+.wp-block-group.waves-before--is-active {
+	z-index: 1 !important;
+}

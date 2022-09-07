@@ -1,0 +1,599 @@
+.gfield {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	position: relative;
+
+	& .ginput_container {
+		width: calc(100% - 125px);
+
+		@media (--medium-up) {
+			width: calc(100% - 180px);
+		}
+	}
+
+	& .gfield_time_ampm,
+	& .name_prefix_select,
+	& .ginput_container_select,
+	& .ginput_address_country {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 18px;
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+			border: solid black;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 3px;
+		}
+	}
+
+	& .ginput_address_country::after,
+	& .name_prefix_select::after {
+		top: calc(50% + 12px);
+	}
+
+	& .ginput_address_country select,
+	& .gfield_time_ampm select,
+	& .name_prefix_select select,
+	& .gfield_select {
+		@extend %button;
+
+		font-size: 16px;
+		width: 100%;
+		border-radius: 0;
+		padding: 9px 40px 10px 18px;
+		height: 100%;
+		appearance: none;
+	}
+
+	& input[type="text"],
+	& input[type="email"],
+	& input[type="number"],
+	& input[type="tel"],
+	& input[type="url"] {
+		@extend %button;
+
+		border-radius: 0;
+		border: 1px solid var(--color-black);
+		font-size: 16px;
+		padding: 11px 18px 10px;
+		line-height: 1.54;
+		width: 100%;
+		height: 100%;
+		min-height: 49px;
+
+		&:focus {
+			box-shadow: 0 15px 30px rgba(9, 30, 55, 0.08);
+		}
+	}
+
+	& textarea {
+		@extend %button;
+
+		border-radius: 0;
+		border: 1px solid var(--color-black);
+		resize: vertical;
+		max-width: 100%;
+		width: 100%;
+		height: 100%;
+		font-size: 16px;
+		padding: 12px 18px;
+		font-family: var(--font-family-base);
+
+		&:focus {
+			box-shadow: 0 15px 30px rgba(9, 30, 55, 0.08);
+		}
+	}
+
+	& .ginput_container_radio,
+	& .ginput_container_checkbox,
+	& .ginput_container_consent {
+		margin-left: 10px;
+	}
+
+	& .gfield_description {
+		font-size: var(--size-s);
+		width: 100%;
+		margin-left: 143px;
+		margin-top: 4px;
+
+		@media (--medium-up) {
+			margin-left: 198px;
+		}
+	}
+
+	&.gfield_error {
+		& input[type="text"],
+		& input[type="email"],
+		& textarea {
+			border-color: var(--color-red);
+		}
+	}
+
+	& .gfield_validation_message {
+		color: var(--color-red);
+	}
+}
+
+.gform_title {
+	@extend %heading-l;
+
+	margin-bottom: var(--spacing-20);
+}
+
+.gform_validation_errors {
+	padding: var(--spacing-20);
+	border: 1px solid var(--color-red);
+	background-color: rgba(229, 120, 113, 0.2);
+	margin-bottom: var(--spacing-20);
+}
+
+.gform_required_legend {
+	display: none;
+}
+
+.ginput_recaptcha + .gfield_validation_message {
+	margin-left: 0;
+}
+
+label.gfield_label {
+	@extend %button;
+
+	background-color: var(--color-light-gray);
+	display: block;
+	width: 125px;
+	flex-shrink: 0;
+	margin-bottom: 0;
+	padding: 11px 12px 11px 18px;
+	position: relative;
+
+	& .gfield_required_asterisk {
+		position: absolute;
+		left: 6px;
+		top: 6px;
+		font-size: 0;
+		line-height: 0;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: var(--color-red);
+			border-radius: 50%;
+		}
+	}
+
+	@media (--medium-up) {
+		width: 180px;
+	}
+}
+
+legend.gfield_label {
+	@extend %button;
+
+	padding: 11px 12px 0 18px;
+	background-color: var(--color-light-gray);
+	margin-left: -8px;
+	margin-right: -8px;
+	width: calc(100% + 16px);
+	position: relative;
+
+	& .gfield_required_asterisk {
+		position: absolute;
+		left: 6px;
+		top: 6px;
+		font-size: 0;
+		line-height: 0;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: var(--color-red);
+			border-radius: 50%;
+		}
+	}
+}
+
+.ginput_container_address {
+	@media (--medium-up) {
+		flex-wrap: wrap;
+	}
+
+	& .ginput_address_line_1,
+	& .ginput_address_line_2,
+	& .ginput_address_city,
+	& .ginput_address_zip,
+	& .ginput_address_state,
+	& .ginput_address_country {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media (--medium-up) {
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+	}
+
+	@media (--medium-up) {
+		&.has_street .ginput_address_line_1 {
+			width: calc(100% - 4px);
+		}
+
+		&.has_street.has_street2 {
+			& .ginput_address_line_1,
+			& .ginput_address_line_2 {
+				width: calc(50% - 4px);
+			}
+		}
+
+		&.has_city.has_zip {
+			& .ginput_address_city {
+				width: calc(70% - 4px);
+			}
+
+			& .ginput_address_zip {
+				width: calc(30% - 4px);
+			}
+		}
+
+		&.has_city.has_zip.has_state {
+			& .ginput_address_city,
+			& .ginput_address_zip,
+			& .ginput_address_state {
+				width: calc((100% / 3) - 4px);
+			}
+		}
+
+		& .ginput_address_country {
+			width: calc(50% - 4px);
+		}
+	}
+}
+
+fieldset.gfield {
+	background-color: var(--color-light-gray);
+	padding: 8px;
+
+	& .ginput_complex {
+		width: 100%;
+
+		@media (--medium-up) {
+			display: flex;
+			width: calc(100% + 4px);
+			margin-left: -2px;
+			margin-right: -2px;
+		}
+	}
+
+	& .name_prefix,
+	& .name_first,
+	& .name_middle,
+	& .name_last,
+	& .name_suffix {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media (--medium-up) {
+			width: calc(50% - 4px);
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+	}
+
+	& .name_prefix,
+	& .name_first,
+	& .name_middle,
+	& .name_last,
+	& .name_suffix,
+	& .ginput_address_line_1,
+	& .ginput_address_line_2,
+	& .ginput_address_city,
+	& .ginput_address_zip,
+	& .ginput_address_state,
+	& .ginput_address_country {
+		margin-bottom: 15px;
+
+		& label {
+			margin: 0 0 6px 10px;
+			font-size: var(--size-s);
+		}
+	}
+
+	& .gfield_time_hour,
+	& .gfield_time_minute {
+		width: calc(50% - 10px);
+		display: inline-flex;
+		margin-bottom: 10px;
+
+		@media (--medium-up) {
+			width: calc(50% - 4px);
+			margin-left: 2px;
+			margin-right: 2px;
+			margin-bottom: 0;
+		}
+	}
+
+	& .hour_minute_colon {
+		display: inline-flex;
+		width: 11px;
+		align-items: center;
+		justify-content: center;
+
+		@media (--medium-up) {
+			display: flex;
+			align-items: center;
+			font-size: var(--size-l);
+		}
+	}
+
+	& .gfield_description {
+		margin-left: 10px;
+	}
+
+	&.field_description_below .gfield_description {
+		margin-top: var(--spacing-10);
+	}
+
+	&.field_description_above .gfield_description {
+		margin-bottom: var(--spacing-10);
+	}
+}
+
+.gfield .gfield_time_ampm {
+	width: 100%;
+
+	& select {
+		width: 100%;
+	}
+
+	@media (--medium-up) {
+		width: 180px;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+}
+
+.gfield .ginput_container_list {
+	width: 100%;
+}
+
+.gfield_list_group {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 10px;
+	margin-left: -2px;
+	margin-right: -2px;
+
+	& .gfield_list_group_item {
+		width: calc((100% - 64px) - 4px);
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+
+	& .add_list_item,
+	& .delete_list_item {
+		margin-left: 2px;
+		margin-right: 2px;
+		font-size: 0;
+		line-height: 0;
+		position: relative;
+		width: 31px;
+		height: 30px;
+		appearance: none;
+		border: 1px solid var(--color-gray);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--color-light-gray);
+
+		&::before,
+		&::after {
+			content: "";
+			width: 2px;
+			height: 15px;
+			display: block;
+			background-color: var(--color-rich-blue);
+		}
+
+		&::before {
+			position: absolute;
+			transform: rotate(90deg);
+		}
+	}
+
+	& .delete_list_item::after {
+		content: none;
+	}
+
+	& .gfield_list_icons {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.ginput_preview {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+
+	& .gform_delete_file {
+		margin-right: var(--spacing-10);
+		appearance: none;
+		border-radius: 50%;
+		border: 1px solid var(--color-gray);
+		background-color: var(--color-light-gray);
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 1px;
+		color: var(--color-red);
+
+		& .dashicons {
+			margin-left: 7px;
+		}
+	}
+}
+
+.ginput_container_fileupload {
+	border: 1px solid var(--color-black);
+	position: relative;
+
+	& .gform_drop_area {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 18px;
+		margin: 8px;
+		border: 3px dashed var(--color-light-gray);
+	}
+
+	& .gform_drop_instructions {
+		margin-right: var(--spacing-20);
+	}
+
+	& .gfield_validation_message,
+	& .gform_fileupload_rules {
+		padding: 12px 18px;
+		display: block;
+		text-align: center;
+	}
+
+	& .gfield_validation_message {
+		padding-top: 0;
+	}
+
+	& .ginput_preview {
+		padding-left: 7px;
+		padding-bottom: 12px;
+	}
+}
+
+.gform_page_footer {
+	display: flex;
+	margin-top: var(--spacing-34);
+
+	& .gform_next_button,
+	& .gform_button {
+		margin-left: auto;
+	}
+
+	& .gform_previous_button {
+		margin-right: auto;
+	}
+}
+
+.gform_footer {
+	display: flex;
+
+	& .gform_button {
+		margin-left: auto;
+	}
+}
+
+.gform_wrapper .button {
+	@extend .fse-button;
+
+	background-color: var(--color-rich-blue);
+	border-color: var(--color-rich-blue);
+	color: var(--color-white);
+	padding-left: 25px;
+	padding-right: 25px;
+
+	&:hover {
+		background-color: var(--color-royal-blue);
+		border-color: var(--color-royal-blue);
+	}
+}
+
+.gf_progressbar_title {
+	text-align: center;
+	margin-bottom: var(--spacing-10);
+}
+
+.gf_progressbar_wrapper {
+	margin-top: var(--spacing-12);
+	margin-bottom: var(--spacing-20);
+}
+
+.gf_progressbar {
+	background-color: var(--color-light-gray);
+}
+
+.gf_progressbar_percentage {
+	background-color: var(--color-crown-blue);
+	padding: 5px 0 3px;
+
+	& span {
+		color: var(--color-white);
+		padding-left: 10px;
+	}
+}
+
+.gfield_label.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.gform_confirmation_wrapper p {
+	@extend %paragraph;
+}
+
+.gform_confirmation_wrapper h1 {
+	@extend %h1-heading;
+}
+
+.gform_confirmation_wrapper h2 {
+	@extend %h2-heading;
+}
+
+.gform_confirmation_wrapper h3 {
+	@extend %h3-heading;
+}
+
+.gform_confirmation_wrapper h4 {
+	@extend %h4-heading;
+}
+
+.gform_confirmation_wrapper h5 {
+	@extend %h5-heading;
+}
+
+.gform_confirmation_wrapper h6 {
+	@extend %h6-heading;
+}

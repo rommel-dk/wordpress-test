@@ -1,0 +1,73 @@
+.wp-block-heading {
+	scroll-margin-top: calc(var(--mobile-menu-height) + var(--spacing-30));
+
+	&:not([class*="spacing-after--"]) {
+		margin-bottom: var(--block-spacing-2);
+	}
+
+	&:not([class*="spacing-before--"]):not(:first-child) {
+		margin-top: var(--block-spacing-4);
+	}
+}
+
+/**
+ iecp is the class that gets applied by our ie polyfill.
+ */
+h1.wp-block-heading:not([class*="-font-size"]),
+h1.wp-block-heading[class*="iecp-"] {
+	font-size: var(--size-heading-l);
+	line-height: var(--line-height-s);
+	font-weight: var(--weight-bold);
+	letter-spacing: var(--letter-spacing-s);
+
+	@media (--medium-up) {
+		font-size: var(--size-heading-xl);
+	}
+}
+
+h2.wp-block-heading:not([class*="-font-size"]),
+h2.wp-block-heading[class*="iecp-"] {
+	font-size: var(--size-heading-m);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+
+	@media (--medium-up) {
+		font-size: var(--size-heading-l);
+	}
+}
+
+h3.wp-block-heading:not([class*="-font-size"]),
+h3.wp-block-heading[class*="iecp-"],
+h4.wp-block-heading:not([class*="-font-size"]),
+h4.wp-block-heading[class*="iecp-"] {
+	font-size: var(--size-heading-s);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+	letter-spacing: var(--letter-spacing-s);
+
+	@media (--medium-up) {
+		font-size: var(--size-heading-m);
+	}
+}
+
+h5.wp-block-heading:not([class*="-font-size"]),
+h5.wp-block-heading[class*="iecp-"] {
+	font-size: var(--size-heading-xxs);
+	line-height: var(--line-height-m);
+	font-weight: var(--weight-bold);
+
+	@media (--medium-up) {
+		font-size: var(--size-heading-s);
+	}
+}
+
+h6.wp-block-heading:not([class*="-font-size"]),
+h6.wp-block-heading[class*="iecp-"] {
+	font-size: var(--size-l);
+	line-height: var(--line-height-base);
+	font-weight: var(--weight-bold);
+
+	@media (--medium-up) {
+		font-size: var(--size-heading-xxs);
+	}
+}

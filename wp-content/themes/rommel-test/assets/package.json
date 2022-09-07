@@ -1,0 +1,42 @@
+{
+	"name": "theme",
+	"description": "Assets processing for the theme.",
+	"version": "1.0.0",
+	"author": "Rommel",
+	"scripts": {
+		"start": "npm ci && gulp",
+		"gulp": "gulp"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.5",
+		"@babel/preset-env": "^7.7.6",
+		"@babel/register": "^7.7.4",
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-cli": "^2.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-image": "5.1.0",
+		"gulp-livereload": "^4.0.2",
+		"gulp-postcss": "^8.0.0",
+		"gulp-stylelint": "^11.0.0",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-svgo": "^2.1.1",
+		"gulp-uglify": "^3.0.2",
+		"ie11-custom-properties": "^2.7.4",
+		"natives": "^1.1.6",
+		"postcss-extend-rule": "^3.0.0",
+		"postcss-import": "^12.0.1",
+		"postcss-object-fit-images": "^1.1.2",
+		"postcss-preset-env": "^6.7.0",
+		"postcss-reporter": "^6.0.1",
+		"stylelint": "^12.0.0",
+		"stylelint-config-standard": "^19.0.0"
+	},
+	"dependencies": {
+		"object-fit-images": "^3.2.4",
+		"svg4everybody": "^2.1.9",
+		"tingle.js": "^0.16.0"
+	}
+}

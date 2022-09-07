@@ -1,0 +1,118 @@
+/**
+ Placeholders
+ */
+@import 'placeholders/typography.css';
+@import 'placeholders/forms.css';
+@import 'placeholders/icons.css';
+
+/**
+ Base
+ */
+@import 'base/variables.css';
+@import 'base/reset-editor.css';
+@import 'base/tags.css';
+
+/**
+ Controls
+ */
+@import "blocks/controls/spacing.css";
+
+/**
+ Helpers
+ */
+@import 'helpers/colors.css';
+@import 'helpers/classes.css';
+@import 'helpers/spacing.css';
+@import 'helpers/alignment.css';
+@import 'helpers/sizes.css';
+@import 'helpers/weights.css';
+
+/**
+ Admin
+ */
+@import "blocks/admin/block-notice.css";
+
+/**
+ Components
+ */
+@import "components/form.css";
+@import "components/icons.css";
+
+/**
+ Blocks / Theme
+ */
+
+
+/**
+ Blocks / Wordpress
+ */
+@import "/blocks/wordpress/wp-button.css";
+@import "/blocks/wordpress/wp-group.css";
+@import "/blocks/wordpress/wp-group-editor.css";
+@import "/blocks/wordpress/wp-list.css";
+@import "/blocks/wordpress/wp-paragraph.css";
+@import "/blocks/wordpress/wp-heading.css";
+@import "/blocks/wordpress/wp-pullqoute.css";
+@import "/blocks/wordpress/wp-media-text.css";
+@import "/blocks/wordpress/wp-media-text-editor.css";
+@import "/blocks/wordpress/wp-image.css";
+@import "/blocks/wordpress/wp-image-editor.css";
+@import "/blocks/wordpress/wp-embed.css";
+@import "/blocks/wordpress/wp-file.css";
+@import "/blocks/wordpress/wp-table.css";
+@import "/blocks/wordpress/wp-table-editor.css";
+@import "/blocks/wordpress/wp-separator.css";
+@import "/blocks/wordpress/wp-column.css";
+@import "/blocks/wordpress/wp-column-editor.css";
+@import "/blocks/wordpress/wp-cover.css";
+
+.has-pull-up,
+.has-pull-up.has-pull-up--large {
+	margin-top: 0;
+}
+
+/* Main column width */
+.wp-block {
+	max-width: 680px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+	max-width: 890px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+	max-width: 1300px;
+}
+
+/* Guide box for editor */
+.editor-guide {
+	background-color: #e0e0e0;
+	border: #c2c2c2 3px solid;
+	padding: var(--spacing-30);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #e8e8e8;
+	}
+
+	& .dashicons-edit {
+		display: inline;
+	}
+}
+
+/* Put blocks on top of wave backgrounds in editor. */
+.wp-block {
+	z-index: 2;
+
+	&.is-reusable {
+		max-width: 100% !important;
+		z-index: unset;
+	}
+}

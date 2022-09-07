@@ -1,0 +1,15 @@
+[data-type="core/image"] {
+	max-height: 350px !important;
+
+	@media (--medium-up) {
+		max-height: 520px !important;
+	}
+
+	.components-resizable-box__container {
+		max-height: 350px !important;
+
+		@media (--medium-up) {
+			max-height: 520px !important;
+		}
+	}
+}

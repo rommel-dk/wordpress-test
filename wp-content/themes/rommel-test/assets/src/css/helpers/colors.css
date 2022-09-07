@@ -1,0 +1,61 @@
+/* Text color */
+
+.has-brand-color  {
+	color: var(--color-brand);
+}
+
+.has-white-color  {
+	color: var(--color-white);
+}
+
+.has-gray-light-color  {
+	color: var(--color-gray-light);
+}
+
+.has-gray-color  {
+	color: var(--color-gray);
+}
+
+.has-black-color  {
+	color: var(--color-black);
+}
+
+.has-blue-light-color  {
+	color: var(--color-blue-light);
+}
+
+.has-blue-dusty-color  {
+	color: var(--color-blue-dusty);
+}
+
+.has-blue-dark-color  {
+	color: var(--color-blue-dark);
+}
+
+.has-greenblue-color  {
+	color: var(--color-greenblue);
+}
+
+.has-green-color  {
+	color: var(--color-green);
+}
+
+.has-petroleum-color  {
+	color: var(--color-petroleum);
+}
+
+.has-red-light-color  {
+	color: var(--color-red-light);
+}
+
+.has-red-color  {
+	color: var(--color-red);
+}
+
+.has-red-dark-color  {
+	color: var(--color-red-dark);
+}
+
+.has-orange-color  {
+	color: var(--color-orange);
+}

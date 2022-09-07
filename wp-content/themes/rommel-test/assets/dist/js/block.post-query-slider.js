@@ -1,0 +1,1 @@
+"use strict";var swiper=new Swiper(".post-query-slider",{direction:"horizontal",loop:!0,centeredSlides:!0,slidesPerView:"auto",spaceBetween:20,pagination:{el:".swiper-pagination",clickable:!0},navigation:{prevEl:".swiper-navigation__prev",nextEl:".swiper-navigation__next"}});

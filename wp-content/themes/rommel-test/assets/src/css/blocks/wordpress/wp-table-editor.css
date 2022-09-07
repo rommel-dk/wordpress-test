@@ -1,0 +1,21 @@
+[data-type="core/table"] {
+	overflow: initial;
+
+	& table td,
+	& table th {
+		border: none;
+	}
+
+	&.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+		background-color: var(--color-white);
+	}
+
+	& figcaption {
+		display: none;
+	}
+
+	& .components-placeholder.components-placeholder {
+		position: relative;
+		z-index: 1;
+	}
+}

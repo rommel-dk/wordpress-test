@@ -1,0 +1,181 @@
+/**
+ * Variables.
+ */
+:root {
+	/* stylelint-disable declaration-colon-space-after, at-rule-empty-line-before */
+
+	/* Color Schema
+	=================================================================== */
+	--color-brand: #017DBC;
+	--color-white: #ffffff;
+	--color-gray-light: #F2F8FD;
+	--color-gray: #707A87;
+	--color-black: #272E37;
+	--color-blue-light: #C6E5F6;
+	--color-blue-dusty: #5B8DCA;
+	--color-blue-dark: #204979;
+	--color-greenblue: #33BBAA;
+	--color-green: #9FDAC8;
+	--color-petroleum: #2C7885;
+	--color-red-light: #DEA2B0;
+	--color-red: #F15A5A;
+	--color-red-dark: #8B2E43;
+	--color-orange: #F39458;
+	--color-bluegreen-gradient: linear-gradient(261.38deg, rgba(0, 147, 221, 0.59) 0.82%, #33BBAA 99.04%);
+	--color-bluegreen-gradient-low-opacity: linear-gradient(261.38deg, rgba(0, 147, 221, 0.118) 0.82%, rgba(51, 187, 170, .2) 99.04%);
+	--color-greenblue-gradient: linear-gradient(261.38deg, rgba(197, 235, 255, 0.59) 0.82%, #E6F3FF 99.04%);
+	--color-greenblue-gradient-low-opacity: linear-gradient(261.38deg, rgba(197, 235, 255, 0.118) 0.82%, rgba(230, 243, 255, .2) 99.04%);
+	--text-color: var(--color-black);
+
+	/* Typography
+	=================================================================== */
+
+	/* Families */
+	--font-family-base: 'Avenir Next', sans-serif;
+
+	/* Sizes */
+	--size-base: 16px;
+	--size-xxs: .688rem; /* 11px */
+	--size-xs: .875rem; /* 14px */
+	--size-s: var(--size-base); /* 16px */
+	--size-m: 1.125rem; /* 18px */
+	--size-ml: 1.25rem; /* 20px */
+	--size-l: 1.375rem; /* 22px */
+	--size-mxl: 1.5rem; /* 24px */
+	--size-xl: 2.125rem; /* 34px */
+
+	/* Heading Sizes */
+	--size-heading-xxs: 1.438rem; /* 23px */
+	--size-heading-s: 2.125rem; /* 34px */
+	--size-heading-m: 2.625rem; /* 42px */
+	--size-heading-l: 3.25rem; /* 52px */
+	--size-heading-xl: 3.875rem; /* 62px */
+
+	/* Other sizes */
+	--size-caps: var(--size-base); /* 16px */
+	--size-caps-s: .813rem; /* 13px */
+
+	/* Weights */
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-bold: 700;
+
+	/* Line height */
+	--line-height-base: 1.6;
+	--line-height-s: 1.4;
+	--line-height-m: 1.5;
+	--line-height-l: 1.7;
+
+	/* Letter spacing */
+	--letter-spacing-s: -0.01em;
+	--letter-spacing-m: .15em;
+
+	/* Effects
+	=================================================================== */
+
+	/* Border */
+	--border-radius-m: 6px;
+	--border-radius-l: 12px;
+	--border-radius-xl: 100px;
+
+	/* Shadows */
+	--shadow: 0px 30px 50px rgba(33, 50, 58, 0.15);
+	--shadow-floaty: 0px 20px 40px rgba(111, 144, 159, 0.2);
+	--shadow-light: 0px 20px 40px rgba(33, 50, 58, 0.08);
+
+	/* Transition */
+	--transition-default: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+	--transition-fast: all .25s ease-in-out;
+
+	/* Spacing and sizing
+	=================================================================== */
+
+	/* Generic spacing. */
+	--spacing-base: 1rem; /* 15px */
+	--spacing-5: 0.333rem; /* 5px */
+	--spacing-10: 0.667rem; /* 10px */
+	--spacing-20: 1.333rem; /* 20px */
+	--spacing-24: 1.6rem; /* 24px */
+	--spacing-25: 1.667rem; /* 25px */
+	--spacing-30: 2rem; /* 30px */
+	--spacing-40: 2.667rem; /* 40px */
+	--spacing-50: 3.333rem; /* 50px */
+	--spacing-55: 3.667rem; /* 55px */
+	--spacing-60: 4rem; /* 60px */
+	--spacing-65: 4.333rem; /* 65px */
+	--spacing-70: 4.667rem; /* 70px */
+	--spacing-75: 5rem; /* 65px */
+	--spacing-80: 5.333rem; /* 80px */
+	--spacing-85: 5.667rem; /* 85px */
+	--spacing-90: 6rem; /* 90px */
+	--spacing-100: 6.667rem; /* 100px */
+	--spacing-110: 7.333rem; /* 110px */
+	--spacing-120: 8rem; /* 120px */
+	--spacing-125: 8.333rem; /* 125px */
+	--spacing-130: 8.667rem; /* 130px */
+	--spacing-140: 9.333rem; /* 140px */
+	--spacing-150: 10rem; /* 150px */
+	--spacing-170: 11.333rem; /* 170px */
+
+	/* Block spacing */
+	--block-spacing-0: 0;
+	--block-spacing-1: var(--spacing-base);
+	--block-spacing-2: var(--spacing-20);
+	--block-spacing-3: var(--spacing-30);
+	--block-spacing-4: var(--spacing-50);
+	--block-spacing-5: var(--spacing-55);
+	--block-spacing-6: var(--spacing-60);
+	--block-spacing-7: var(--spacing-70);
+	--block-spacing-8: var(--spacing-75);
+	--block-spacing-9: var(--spacing-80);
+	--block-spacing-10: var(--spacing-85);
+	--block-spacing-11: var(--spacing-125);
+	--block-spacing-12: var(--spacing-130);
+	--block-spacing-13: var(--spacing-140);
+	--block-spacing-14: var(--spacing-150);
+
+	/* Grid values */
+	--sidebar-box-width: 365px;
+	--content-sidebar-width-no-padding: 710px;
+	--content-sidebar-wide-width-no-padding: 762px;
+	--content-sidebar-container-width-no-padding: 1150px;
+	--content-sidebar-container-width: calc(var(--content-sidebar-container-width-no-padding) + (var(--gutter) * 2));
+	--content-no-sidebar-wide-width-no-padding: 950px;
+	--content-no-sidebar-width-no-padding: 850px;
+	--container-width: calc(var(--container-width-no-padding) - (var(--gutter) * 2));
+	--container-width-no-padding: 1240px;
+	--container-width-medium: calc(var(--container-width-medium-no-padding) - (var(--gutter) * 2));
+	--container-width-medium-no-padding: 1340px;
+	--container-width-wide-no-padding: 1440px;
+	--page-full-width: 1800px;
+	--gutter: 20px;
+
+	/* Mobile menu */
+	--mobile-menu-height: 130px;
+}
+
+/* 560px Small screen breakpoints */
+@custom-media --small-up (width >= 35em);
+
+@custom-media --wp-small-up (width >= 37.5em);
+
+/* 832px */
+@custom-media --medium-up (width >= 52em);
+
+/* 1024px */
+@custom-media --large-up (width >= 64em);
+
+/* 1300px */
+@custom-media --xlarge-up (width >= 81.25em);
+
+/* Small screen only breakpoints */
+@custom-media --small-down (width < 35em);
+
+@custom-media --medium-down (width < 52em);
+
+@custom-media --large-down (width < 64em);
+
+@custom-media --xlarge-down (width < 81.25em);
+
+/* IE only */
+@custom-media --ie (-ms-high-contrast: none);

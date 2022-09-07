@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+	.wp-block-columns {
+		padding-left: var(--gutter);
+		padding-right: var(--gutter);
+	}
+}
+
+/* If "stack on mobile" is checked. */
+@media (--small-down) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) {
+		flex-wrap: wrap;
+
+		& .wp-block-column {
+			flex-basis: 100% !important;
+		}
+	}
+}

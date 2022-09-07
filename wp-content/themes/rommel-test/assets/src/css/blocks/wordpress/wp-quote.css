@@ -1,0 +1,78 @@
+.wp-block-quote {
+	position: relative;
+	width: 100% !important;
+	max-width: 100% !important;
+	background: linear-gradient(0deg, rgba(240, 244, 249, 1) 0%, rgba(240, 244, 249, 0) 63%), url(../images/paper-bg.jpg);
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		background-image: url(../images/torn-default.png);
+		left: 0;
+		width: 100%;
+		height: 48px;
+		background-repeat: repeat-x;
+		z-index: 1;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+		transform: scaleY(-1);
+	}
+
+	& * {
+		position: relative;
+		z-index: 2;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: var(--content-wide-max-width-no-padding);
+		width: calc(100% - (var(--gutter) * 2));
+	}
+
+	&:not([class*="spacing-before--"]) {
+		margin-top: var(--spacing-l);
+	}
+
+	&:not([class*="spacing-after--"]) {
+		margin-bottom: var(--spacing-l);
+	}
+
+	& > p {
+		font-weight: var(--weight-light);
+		font-size: var(--size-l);
+		line-height: var(--line-height-xl);
+		padding-top: 85px;
+
+		&:last-child {
+			padding-bottom: 85px;
+		}
+	}
+
+	& > cite {
+		display: block;
+		font-size: var(--size-m);
+		line-height: var(--line-height-l);
+		margin-top: var(--spacing-l);
+		text-align: left;
+		padding-bottom: 85px;
+	}
+
+	@media (--large-up) {
+		&:not([class*="spacing-before--"]) {
+			margin-top: var(--spacing-xxl);
+		}
+
+		&:not([class*="spacing-after--"]) {
+			margin-bottom: var(--spacing-xxl);
+		}
+
+		& > p {
+			font-size: var(--size-xxl);
+		}
+	}
+}

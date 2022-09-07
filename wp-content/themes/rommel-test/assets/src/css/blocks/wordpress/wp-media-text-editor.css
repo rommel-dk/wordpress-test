@@ -1,0 +1,14 @@
+.wp-block > [data-type="core/media-text"] {
+	background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.wp-block[data-align="full"] > [data-type="core/media-text"] {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-media-text.is-image-fill .wp-block-media-text__content {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

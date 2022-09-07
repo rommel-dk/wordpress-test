@@ -1,0 +1,12 @@
+.container {
+	max-width: var(--content-full-width);
+	width: calc(100% - (var(--gutter) * 2));
+	margin: 0 auto;
+}
+
+/*
+ Set the scroll position of anchors 50px above.
+ */
+[data-anchor="true"] {
+	scroll-margin-top: 50px;
+}

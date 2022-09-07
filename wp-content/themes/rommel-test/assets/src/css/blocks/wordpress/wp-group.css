@@ -1,0 +1,29 @@
+.wp-block-group {
+	position: relative;
+
+	&.waves-before--is-active,
+	&.waves-after--is-active {
+		overflow: initial;
+	}
+
+	&:not([class*="padding-before--"]),
+	&.padding-before--1 {
+		& .wp-block-group__inner-container {
+			padding-top: var(--spacing-20);
+		}
+	}
+
+	&:not([class*="padding-after--"]),
+	&.padding-after--1 {
+		& .wp-block-group__inner-container {
+			padding-bottom: var(--spacing-20);
+		}
+	}
+
+	&.alignfull {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+

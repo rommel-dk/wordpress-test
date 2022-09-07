@@ -1,0 +1,94 @@
+.alignwide {
+	max-width: var(--content-no-sidebar-wide-width-no-padding);
+	width: calc(100% - (var(--gutter) * 2));
+}
+
+.alignfull {
+	width: 100%;
+	max-width: var(--container-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block[data-align=full] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	max-width: 100%;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.align-vertical-top {
+	align-items: flex-start;
+}
+
+.align-vertical-center {
+	align-items: center;
+}
+
+.align-vertical-bottom {
+	align-items: flex-end;
+}
+
+.align-horizontal-left {
+	justify-content: flex-start;
+}
+
+.align-horizontal-center {
+	justify-content: center;
+}
+
+.align-horizontal-right {
+	justify-content: flex-end;
+}
+
+.has-text-align-left {
+	text-align: left;
+}
+
+.has-text-align-center {
+	text-align: center;
+}
+
+.has-text-align-right {
+	text-align: right;
+}
+
+/* Align with sidebar. */
+.post-has-sidebar {
+	& .site-main {
+		@media (--xlarge-up) {
+			& .alignwide,
+			& .alignfull {
+				width: calc(100% + 44px);
+				max-width: none;
+				margin-left: -22px;
+				margin-right: -22px;
+			}
+		}
+
+		@media (min-width: 1420px) {
+			& .alignfull {
+				width: calc(100% + 168px);
+				margin-left: -128px;
+			}
+		}
+
+		@media (min-width: 1520px) {
+			& .alignfull {
+				width: calc(100% + 188px);
+				margin-left: -148px;
+			}
+		}
+	}
+}

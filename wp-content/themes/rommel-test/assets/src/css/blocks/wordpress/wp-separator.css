@@ -1,0 +1,10 @@
+.wp-block-separator {
+	height: 1px;
+	border: none;
+	width: calc(100% + (var(--spacing-10) * 2));
+	margin: var(--spacing-20) calc(var(--spacing-10) * -1);
+
+	&:not([class*="has-background"]) {
+		background-color: var(--color-blue-dusty);
+	}
+}
